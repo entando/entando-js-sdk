@@ -1,14 +1,22 @@
-import apiRequest from '../common/apiRequest';
-import ApiRequestConfig from '../common/ApiRequestConfig';
+import performApiRequest from '../common/performApiRequest';
+import ApiRequestObject from '../common/ApiRequest';
 
 const BASE_ENDPOINT = '/api/plugins/cms/contents/';
 
 export const fetchContentById = async (
   id: string,
-  apiRequestConfig?: ApiRequestConfig
+  apiRequestConfig?: ApiRequestObject
 ) => {
   const endpoint = `${BASE_ENDPOINT}${id}`;
-  return apiRequest({
+  return performApiRequest({
+    endpoint,
+    ...apiRequestConfig,
+  });
+};
+
+export const fetchContents = async (apiRequestConfig?: ApiRequestObject) => {
+  const endpoint = `${BASE_ENDPOINT}`;
+  return performApiRequest({
     endpoint,
     ...apiRequestConfig,
   });
