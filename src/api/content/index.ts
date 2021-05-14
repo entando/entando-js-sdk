@@ -1,5 +1,5 @@
 import api from '../common/api';
-import ApiRequest from '../common/EntandoApiRequest';
+import ApiRequest from '../common/ApiRequest';
 
 const BASE_ENDPOINT = '/api/plugins/cms/contents/';
 

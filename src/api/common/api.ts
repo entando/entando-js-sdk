@@ -1,5 +1,5 @@
 import ApiError from './ApiError';
-import ApiRequest from './EntandoApiRequest';
+import ApiRequest from './ApiRequest';
 
 const JSON_CONTENT_TYPE = 'application/json';
 
