@@ -45,25 +45,24 @@ async function fetchJson(url: string, config?: RequestInit) {
   const contentType = response.headers.get('content-type');
   const hasJson = contentType && contentType.startsWith(JSON_CONTENT_TYPE);
   if (!hasJson) {
-    throw {
+    Promise.reject({
       errors: [
         {
           status: response.status,
           message: response.statusText,
         },
       ],
-    };
+    });
   }
   const jsonResponse = await response.json();
   if (!response.ok) {
-    throw {
+    Promise.reject({
       ...jsonResponse,
       errors: jsonResponse.errors.map((apiError: ApiError) => ({
         ...apiError,
         status: response.status,
       })),
-    };
+    });
   }
   return jsonResponse;
 }
-
