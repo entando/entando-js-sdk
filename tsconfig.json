@@ -20,7 +20,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     // use Node's module resolution algorithm, instead of the legacy TS one
-    "noResolve": true,
     "moduleResolution": "node",
     // transpile JSX to React.createElement
     "jsx": "react",
