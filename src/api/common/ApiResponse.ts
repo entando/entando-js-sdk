@@ -1,5 +1,7 @@
+import ApiError from './ApiError';
+
 export default interface ApiResponse {
   payload: any;
-  errors: [{ code?: string; status?: number; message: string }];
+  errors: ApiError[];
   meta: any;
 }
