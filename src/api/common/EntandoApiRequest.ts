@@ -1,4 +1,4 @@
-export default interface EntandoApiRequest {
+export default interface ApiRequest {
   endpoint: string;
   serverUrl?: string;
   token?: string;
