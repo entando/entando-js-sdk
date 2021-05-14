@@ -1,6 +1,5 @@
 import ApiError from './ApiError';
 import ApiRequest from './ApiRequest';
-import pjson from '../../../package.json';
 
 const JSON_CONTENT_TYPE = 'application/json';
 
@@ -21,7 +20,6 @@ export default async function api(apiRequest: ApiRequest) {
 function composeConfig(customConfig?: Partial<RequestInit>, token?: string) {
   const baseHeaders = {
     'Content-Type': JSON_CONTENT_TYPE,
-    'User-Agent': `js/${pjson.version}`,
   };
 
   const headers = token
