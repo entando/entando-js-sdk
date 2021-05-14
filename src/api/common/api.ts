@@ -1,9 +1,9 @@
 import ApiError from './ApiError';
-import ApiRequest from './ApiRequest';
+import EntandoApiRequest from './ApiRequest';
 
 const JSON_CONTENT_TYPE = 'application/json';
 
-export default async function api(apiRequest: ApiRequest) {
+export default async function api(apiRequest: EntandoApiRequest) {
   const { endpoint, serverUrl, token, customConfig, queryParams } = apiRequest;
 
   if (!endpoint) {

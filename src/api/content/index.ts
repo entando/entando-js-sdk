@@ -1,9 +1,9 @@
 import api from '../common/api';
-import ApiRequest from '../common/ApiRequest';
+import EntandoApiRequest from '../common/ApiRequest';
 
 const BASE_ENDPOINT = '/api/plugins/cms/contents/';
 
-export const fetchContentById = async (id: string, apiRequest?: ApiRequest) => {
+export const fetchContentById = async (id: string, apiRequest?: EntandoApiRequest) => {
   const endpoint = `${BASE_ENDPOINT}${id}`;
   return api({
     endpoint,
@@ -11,7 +11,7 @@ export const fetchContentById = async (id: string, apiRequest?: ApiRequest) => {
   });
 };
 
-export const fetchContents = async (apiRequest?: ApiRequest) => {
+export const fetchContents = async (apiRequest?: EntandoApiRequest) => {
   const endpoint = `${BASE_ENDPOINT}`;
   return api({
     endpoint,
