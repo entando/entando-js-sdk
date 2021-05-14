@@ -21,8 +21,6 @@ jobs:
 
       - name: Install deps and build
         uses: bahmutov/npm-install@v1
-        with:
-          useRollingCache: false        
 
       - name: Lint
         run: yarn lint
